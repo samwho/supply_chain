@@ -1,0 +1,11 @@
+{% if latest_customers_list %}
+<div style="display: flex; flex-direction: column; align-items: center;">
+    <ul style="list-style-type: none;">
+    {% for customer in latest_customers_list %}
+        <li><a href="/customers/{{ customer.id }}/">{{ customer.name}}</a></li>
+    {% endfor %}
+    </ul>
+</div>
+{% else %}
+    <p>No customers are available.</p>
+{% endif %}

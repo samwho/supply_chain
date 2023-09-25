@@ -1,0 +1,11 @@
+{% if latest_products_list %}
+<div style="display: flex; flex-direction: column; align-items: center;">
+    <ul>
+    {% for product in latest_products_list %}
+        <li><a href="/product/{{ product.id }}/">{{ product.product_name}}</a></li>
+    {% endfor %}
+    </ul>
+</div>
+{% else %}
+    <p>No products are available.</p>
+{% endif %}

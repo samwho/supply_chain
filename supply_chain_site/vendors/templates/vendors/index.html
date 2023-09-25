@@ -1,0 +1,11 @@
+{% if latest_vendors_list %}
+<div style="display: flex; flex-direction: column; align-items: center;">
+    <ul style="list-style-type: none;">
+    {% for vendor in latest_vendors_list %}
+        <li><a href="/vendors/{{ vendor.id }}/">{{ vendor.name}}</a></li>
+    {% endfor %}
+    </ul>
+</div>
+{% else %}
+    <p>No vendors are available.</p>
+{% endif %}

@@ -1,0 +1,11 @@
+{% if latest_labours_list %}
+<div style="display: flex; flex-direction: column; align-items: center;">
+    <ul style="list-style-type: none;">
+    {% for labour in latest_labours_list %}
+        <li><a href="/labours/{{ labour.id }}/">{{ labour.name}}</a></li>
+    {% endfor %}
+    </ul>
+</div>
+{% else %}
+    <p>No labours are available.</p>
+{% endif %}
